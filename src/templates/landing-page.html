@@ -1,0 +1,18 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: sandbox - Landing Page
+  screenshotPath: images/u4-landing-page.jpg
+-->
+{% extends './base.html' %}
+
+{% block body %}
+{# Add class to hide nav #}
+<script>document.body.classList.add("u4-landing-page");</script>
+
+<main id="main-content" class="body-container-wrapper">
+    {% widget_container "flexible_column" %}
+      {% module 'u4m-landing-page-overlap' path='../modules/u4m-landing-page-overlap', label='Landing Page Overlap' %}
+    {% end_widget_container %} 
+</main>
+{% endblock body %}
